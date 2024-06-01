@@ -39,5 +39,7 @@ getUserById(id, (error, user) => {
 const getPokemonById = require("./js-foundation/06-promises");
 getPokemonById(4)
   .then((pokemon) => console.log({ pokemon }))
-  .catch((error) => console.log("Please try again"))
+  .catch((error) => console.log({ error }))
   .finally(() => console.log("Pokemon request finished"));
+
+// token de acceso
