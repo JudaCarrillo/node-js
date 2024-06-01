@@ -20,5 +20,9 @@
   "homepage": "https://github.com/JudaCarrillo/node-js#readme",
   "devDependencies": {
     "nodemon": "^3.1.1"
+  },
+  "dependencies": {
+    "get-age": "^1.0.1",
+    "uuid": "^9.0.1"
   }
 }
