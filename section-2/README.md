@@ -13,3 +13,5 @@ npm run dev
 - Dependency Injection: Dependency Injection is a technique in which an object receives other objects that it depends on. These other objects are called dependencies.
 - Promises: A promise is an object representing the eventual completion or failure of an asynchronous operation.
 - Async/Await: The async function declaration defines an asynchronous function, which returns an AsyncFunction object. The await expression causes async function execution to pause until a Promise is settled (that is, fulfilled or rejected), and to resume execution of the async function after fulfillment.
+- Winston: Winston is a logger for just about everything. It is designed to be a simple and universal logging library with support for multiple transports.
+- Logger: A logger is a program that receives log messages and stores them in a way that makes them easy to manage.

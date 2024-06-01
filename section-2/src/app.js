@@ -36,10 +36,18 @@ getUserById(id, (error, user) => {
 // console.log({ juda });
 
 // ! 7. promises
-const getPokemonById = require("./js-foundation/06-promises");
-getPokemonById(4)
-  .then((pokemon) => console.log({ pokemon }))
-  .catch((error) => console.log({ error }))
-  .finally(() => console.log("Pokemon request finished"));
+// const getPokemonById = require("./js-foundation/06-promises");
+// getPokemonById('a')
+//   .then((pokemon) => console.log({ pokemon }))
+//   .catch((error) => console.error({ error }))
+//   .finally(() => console.log("Pokemon request finished"));
 
 // token de acceso
+
+// ! 8. logger
+const { buildLogger } = require("./plugins");
+// const getPokemonById = require("./js-foundation/06-promises");
+const logger = buildLogger("app.js");
+
+logger.log("Hello world");
+logger.error("This is an error");

@@ -2,8 +2,6 @@
 
 ## Topics
 
-- Loggers
-- Winston
 - Basic Configurations and Adapters
 - TypeScript
 - Setting up TypeScript with NodeJs
