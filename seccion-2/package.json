@@ -1,0 +1,24 @@
+{
+  "name": "bases",
+  "version": "0.0.1",
+  "description": "Node application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JudaCarrillo/node-js.git"
+  },
+  "author": "Juda Carrillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JudaCarrillo/node-js/issues"
+  },
+  "homepage": "https://github.com/JudaCarrillo/node-js#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}
