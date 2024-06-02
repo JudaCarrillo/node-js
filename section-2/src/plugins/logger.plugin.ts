@@ -1,5 +1,5 @@
-const winston = require("winston");
-const { combine, timestamp, json } = winston.format;
+import winston, { format } from "winston";
+const { combine, timestamp, json } = format;
 
 const logger = winston.createLogger({
   level: "info",
@@ -18,12 +18,12 @@ const logger = winston.createLogger({
 
 logger.add(new winston.transports.Console({ format: winston.format.simple() }));
 
-function buildLogger(service) {
+export const buildLogger = (service: string) => {
   return {
-    log: (message) => {
+    log: (message: string) => {
       logger.log("info", { message, service });
     },
-    error: (message) => {
+    error: (message: string) => {
       logger.log("error", {
         message,
         service,
@@ -31,8 +31,4 @@ function buildLogger(service) {
       });
     },
   };
-}
-
-module.exports = {
-  buildLogger,
 };
