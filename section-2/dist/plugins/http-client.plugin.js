@@ -8,20 +8,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const axios = require("axios");
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.buildHttpClient = void 0;
+const axios_1 = __importDefault(require("axios"));
 // factory function
 const buildHttpClient = (defaultHeaders = {}) => {
     // wrapper for fetch
     return {
         get: (url_1, ...args_1) => __awaiter(void 0, [url_1, ...args_1], void 0, function* (url, headers = {}) {
-            /*
-            const response = await axios({
-            method: "get",
-            url,
-            });
-            return response.data;
-            */
-            const { data } = yield axios.get(url, {
+            const { data } = yield axios_1.default.get(url, {
                 headers: Object.assign(Object.assign({}, defaultHeaders), headers),
             });
             return data;
@@ -31,6 +29,4 @@ const buildHttpClient = (defaultHeaders = {}) => {
         delete: (url) => __awaiter(void 0, void 0, void 0, function* () { }),
     };
 };
-module.exports = {
-    httpClient: buildHttpClient,
-};
+exports.buildHttpClient = buildHttpClient;

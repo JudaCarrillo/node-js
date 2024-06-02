@@ -1,30 +1,18 @@
-const axios = require("axios");
+import axios from "axios";
 
 // factory function
-const buildHttpClient = (defaultHeaders = {}) => {
+export const buildHttpClient = (defaultHeaders = {}) => {
   // wrapper for fetch
   return {
-    get: async (url, headers = {}) => {
-      /* 
-      const response = await axios({
-      method: "get",
-      url,
-      });
-      return response.data; 
-      */
-
+    get: async (url: string, headers = {}) => {
       const { data } = await axios.get(url, {
         headers: { ...defaultHeaders, ...headers },
       });
       return data;
     },
 
-    post: async (url, body) => {},
-    put: async (url, body) => {},
-    delete: async (url) => {},
+    post: async (url: string, body: any) => {},
+    put: async (url: string, body: any) => {},
+    delete: async (url: string) => {},
   };
-};
-
-module.exports = {
-  httpClient: buildHttpClient,
 };

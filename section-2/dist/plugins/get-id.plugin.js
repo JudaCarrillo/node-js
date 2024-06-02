@@ -1,9 +1,8 @@
 "use strict";
-// const { v4: uuidv4 } = require("uuid");
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getUUID = void 0;
+const uuid_1 = require("uuid");
 const getUUID = () => {
-    // return uuidv4();
-    return new Date().getTime();
+    return (0, uuid_1.v4)();
 };
-module.exports = {
-    getUUID,
-};
+exports.getUUID = getUUID;

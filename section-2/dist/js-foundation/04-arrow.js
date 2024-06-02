@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getUserById = void 0;
 const users = [
     {
         id: 1,
@@ -11,14 +13,10 @@ const users = [
 ];
 const getUserById = (id, callback) => {
     const user = users.find((user) => user.id === id);
-    (user)
-        ? callback(null, user)
-        : callback(`User not found with id ${id}`);
+    user ? callback(undefined, user) : callback(`User not found with id ${id}`);
     // if (!user) {
     //   return callback(`User not found with id ${id}`);
     // }
     // return callback(null, user);
 };
-module.exports = {
-    getUserById,
-};
+exports.getUserById = getUserById;

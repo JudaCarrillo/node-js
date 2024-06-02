@@ -1,6 +1,8 @@
 "use strict";
 // 1.
 // console.log('Hola Mundo desde app.js');
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.name = void 0;
 // 2.
 // const { emailTemplate } = require("./js-foundation/01-template");
 // console.log(emailTemplate);
@@ -30,16 +32,16 @@ getUserById(id, (error, user) => {
 // const juda = makePerson(obj);
 // console.log({ juda });
 // ! 7. promises
-// const getPokemonById = require("./js-foundation/06-promises");
-// getPokemonById('a')
+// const getPokemonNameById = require("./js-foundation/06-promises");
+// getPokemonNameById('a')
 //   .then((pokemon) => console.log({ pokemon }))
 //   .catch((error) => console.error({ error }))
 //   .finally(() => console.log("Pokemon request finished"));
 // token de acceso
 // ! 8. logger
-// const { buildLogger } = require("./plugins");
-// const getPokemonById = require("./js-foundation/06-promises");
-// const logger = buildLogger("app.js");
-// logger.log("Hello world");
-// logger.error("This is an error");
-console.log('hello world');
+const plugins_1 = require("./plugins");
+const logger = (0, plugins_1.buildLogger)("app.js");
+logger.log("Hello world");
+logger.error("This is an error");
+exports.name = "Juda";
+console.log(`Hello ${exports.name}!`);

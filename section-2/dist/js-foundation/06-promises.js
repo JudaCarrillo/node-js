@@ -8,10 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const { httpClient } = require("../plugins/http-client.plugin");
-const httpClientNoAuth = httpClient();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getPokemonNameById = void 0;
+const plugins_1 = require("../plugins/");
+const httpClientNoAuth = (0, plugins_1.httpClient)();
 // by default return undefined
-const getPokemonById = (id) => __awaiter(void 0, void 0, void 0, function* () {
+const getPokemonNameById = (id) => __awaiter(void 0, void 0, void 0, function* () {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
     const pokemon = yield httpClientNoAuth.get(url);
     // const response = await fetch(url);
@@ -28,4 +30,4 @@ const getPokemonById = (id) => __awaiter(void 0, void 0, void 0, function* () {
         .then((pokemon) => pokemon.name)
     ); */
 });
-module.exports = getPokemonById;
+exports.getPokemonNameById = getPokemonNameById;

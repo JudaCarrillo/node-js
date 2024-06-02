@@ -1,10 +1,5 @@
-// const { v4: uuidv4 } = require("uuid");
+import { v4 as uuidv4 } from "uuid";
 
-const getUUID = () => {
-  // return uuidv4();
-  return new Date().getTime();
-};
-
-module.exports = {
-  getUUID,
+export const getUUID = () => {
+  return uuidv4();
 };

@@ -36,8 +36,8 @@ getUserById(id, (error, user) => {
 // console.log({ juda });
 
 // ! 7. promises
-// const getPokemonById = require("./js-foundation/06-promises");
-// getPokemonById('a')
+// const getPokemonNameById = require("./js-foundation/06-promises");
+// getPokemonNameById('a')
 //   .then((pokemon) => console.log({ pokemon }))
 //   .catch((error) => console.error({ error }))
 //   .finally(() => console.log("Pokemon request finished"));
@@ -45,12 +45,12 @@ getUserById(id, (error, user) => {
 // token de acceso
 
 // ! 8. logger
-// const { buildLogger } = require("./plugins");
-// const getPokemonById = require("./js-foundation/06-promises");
-// const logger = buildLogger("app.js");
+import { buildLogger } from "./plugins";
+const logger = buildLogger("app.js");
 
-// logger.log("Hello world");
-// logger.error("This is an error");
+logger.log("Hello world");
+logger.error("This is an error");
 
+export const name: string = "Juda";
 
-console.log('hello world');
+console.log(`Hello ${name}!`);
