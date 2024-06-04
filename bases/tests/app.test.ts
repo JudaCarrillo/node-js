@@ -1,7 +1,20 @@
-describe("App", () => {
+// A A A
+// arrange, act, assert
 
-  it("should be true", () => {
-    expect(true).toBe(true);
+describe("Test in the App File", () => {
+
+  it("should be 30", () => {
+
+    // Arrange
+    const number1 = 10;
+    const number2 = 20;
+
+    // Act
+    const result = number1 + number2;
+
+    // Assert
+    expect(result).toBe(30);
+
   });
 
 });

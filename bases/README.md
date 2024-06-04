@@ -19,6 +19,7 @@ npm run dev
 - Jest Testing: It's a delightful JavaScript Testing Framework with a focus on simplicity.
 - NodeJs + Typescript Testing: We can use `jest` to test our NodeJs application written in TypeScript.
 - Coverage: It's a measure used to describe the degree to which the source code of a program is executed when a particular test suite runs.
+- SpyOn: It's a Jasmine feature that allows you to spy on a function and track calls to it and all arguments.
 
 ### Unit Testing
 
