@@ -1,9 +1,34 @@
 # 02 Node Foundations
 
+## Scripts
 Run locally:
 
 ```
 npm run dev
+```
+
+Run tests:
+
+```
+npm run test
+```
+
+Run tests with coverage:
+
+```
+npm run test:coverage
+```
+
+Run build for production:
+
+```
+npm run build
+```
+
+Run production:
+
+```
+npm run start
 ```
 
 ## Topics
