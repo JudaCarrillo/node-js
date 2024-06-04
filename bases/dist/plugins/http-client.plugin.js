@@ -24,9 +24,15 @@ const buildHttpClient = (defaultHeaders = {}) => {
             });
             return data;
         }),
-        post: (url, body) => __awaiter(void 0, void 0, void 0, function* () { }),
-        put: (url, body) => __awaiter(void 0, void 0, void 0, function* () { }),
-        delete: (url) => __awaiter(void 0, void 0, void 0, function* () { }),
+        post: (url, body) => __awaiter(void 0, void 0, void 0, function* () {
+            throw new Error("Not implemented");
+        }),
+        put: (url, body) => __awaiter(void 0, void 0, void 0, function* () {
+            throw new Error("Not implemented");
+        }),
+        delete: (url) => __awaiter(void 0, void 0, void 0, function* () {
+            throw new Error("Not implemented");
+        }),
     };
 };
 exports.buildHttpClient = buildHttpClient;

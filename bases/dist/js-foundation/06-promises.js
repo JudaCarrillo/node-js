@@ -14,12 +14,14 @@ const plugins_1 = require("../plugins/");
 const httpClientNoAuth = (0, plugins_1.httpClient)();
 // by default return undefined
 const getPokemonNameById = (id) => __awaiter(void 0, void 0, void 0, function* () {
-    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-    const pokemon = yield httpClientNoAuth.get(url);
-    // const response = await fetch(url);
-    // const pokemon = await response.json();
-    // throw new Error("Pokemon not found");
-    return pokemon.name;
+    try {
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+        const pokemon = yield httpClientNoAuth.get(url);
+        return pokemon.name;
+    }
+    catch (error) {
+        throw "Pokemon not found with id: " + id;
+    }
     /* return (
       fetch(url)
         // does not return the expected response
