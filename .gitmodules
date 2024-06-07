@@ -1,0 +1,3 @@
+[submodule "clean-arquitecture"]
+	path = clean-arquitecture
+	url = https://github.com/JudaCarrillo/clean-architecture-nodejs.git
